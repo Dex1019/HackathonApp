@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Exam Name"
+        android:text="Exam Details"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold|italic" />
@@ -27,6 +27,7 @@
     <android.support.v7.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:gravity="center"
         android:text="Exam Name"
         android:textSize="20sp" />
@@ -35,7 +36,9 @@
         android:id="@+id/textView_exam_name"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:background="@drawable/border"
         android:gravity="center"
+
         android:textSize="20sp" />
 
 
@@ -51,9 +54,10 @@
         android:textSize="20sp" />
 
     <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/textView_admit_no"
+        android:id="@+id/textView_roll_no"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:background="@drawable/border"
         android:gravity="center"
         android:textSize="20sp" />
 
@@ -72,6 +76,7 @@
         android:id="@+id/textView_center_name"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:background="@drawable/border"
         android:gravity="center"
         android:textSize="20sp" />
 
@@ -134,7 +139,7 @@
             android:gravity="center"
             android:text="Get location"
             android:textAllCaps="false"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
     </android.support.v7.widget.LinearLayoutCompat>
 
