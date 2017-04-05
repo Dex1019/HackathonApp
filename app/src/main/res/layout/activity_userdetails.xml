@@ -2,7 +2,8 @@
 <android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#FEFEC6"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".activity.UserDetails">
@@ -38,8 +39,8 @@
         android:layout_height="40dp"
         android:background="@drawable/border"
         android:gravity="center"
-
-        android:textSize="20sp" />
+        android:textColor="#F48000"
+        android:textSize="22sp" />
 
 
     <android.support.v4.widget.Space
@@ -51,7 +52,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Admit card no/Roll no"
-        android:textSize="20sp" />
+        android:textSize="22sp" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/textView_roll_no"
@@ -59,6 +60,7 @@
         android:layout_height="40dp"
         android:background="@drawable/border"
         android:gravity="center"
+        android:textColor="#F48000"
         android:textSize="20sp" />
 
     <android.support.v4.widget.Space
@@ -78,70 +80,60 @@
         android:layout_height="40dp"
         android:background="@drawable/border"
         android:gravity="center"
+        android:textColor="#F48000"
+        android:textSize="22sp" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="20dp"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/button_Admit_Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#009049"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="Download Admit Card"
+        android:textAllCaps="false"
+
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Get Your Center location"
         android:textSize="20sp" />
 
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
         android:layout_height="16dp" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/button_getLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Admit Card"
-            android:textSize="18sp" />
-
-        <android.support.v4.widget.Space
-            android:layout_width="20dp"
-            android:layout_height="wrap_content" />
-
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/button_Admit_Card"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/secondary_text_dark"
-            android:gravity="center"
-            android:text="Download"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-    </android.support.v7.widget.LinearLayoutCompat>
-
-    <android.support.v4.widget.Space
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
-
-    <android.support.v7.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Get Your Center location"
-            android:textSize="18sp" />
-
-        <android.support.v4.widget.Space
-            android:layout_width="20dp"
-            android:layout_height="wrap_content" />
-
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/button_getLocation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/secondary_text_dark"
-            android:gravity="center"
-            android:text="Get location"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
-
-    </android.support.v7.widget.LinearLayoutCompat>
+        android:background="#009049"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Get location"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
 
 
 </android.support.v7.widget.LinearLayoutCompat>

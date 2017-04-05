@@ -20,6 +20,7 @@ public class APIhelper {
     private static final String endpoint_ExamNameList = "/listexam/";
     private static final String endpoint_RollNo = "/";
     private static final String endpoint_getCenter = "/getcenter/";
+    private static final String getEndpoint_Admidcard = "//";
     private static String examname;
     private static String rollno;
 
@@ -33,6 +34,10 @@ public class APIhelper {
     }
 
     public static String getEndpoint_Center() {
+        return APIhelper.baseUrl + APIhelper.endpoint_getCenter + examname + "/" + rollno + "/";
+    }
+
+    public static String getGetEndpoint_Admidcard() {
         return APIhelper.baseUrl + APIhelper.endpoint_getCenter + examname + "/" + rollno + "/";
     }
 

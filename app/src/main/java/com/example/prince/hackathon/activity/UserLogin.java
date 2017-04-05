@@ -1,12 +1,15 @@
 package com.example.prince.hackathon.activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatSpinner;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 
 import com.android.volley.Response;
@@ -20,6 +23,8 @@ import com.google.gson.Gson;
 import org.json.JSONArray;
 
 import java.util.ArrayList;
+
+import static android.support.design.widget.Snackbar.LENGTH_SHORT;
 
 
 public class UserLogin extends AppCompatActivity implements View.OnClickListener, Response.Listener<JSONArray>, Response.ErrorListener {
@@ -74,7 +79,18 @@ public class UserLogin extends AppCompatActivity implements View.OnClickListener
     public void submit_request() {
         String exname = spinnerExamName.getSelectedItem().toString();
         String rollno = editText_Roll_Number.getText().toString();
-        UserDetails.launchActivity(this, exname, rollno);
+
+        InputMethodManager imm = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(this.getCurrentFocus().getApplicationWindowToken(), 0);
+
+        if (!rollno.isEmpty()) {
+            UserDetails.launchActivity(this, exname, rollno);
+
+        } else {
+            Snackbar.make(this.getCurrentFocus(), "Please insert valid input", LENGTH_SHORT).show();
+        }
+
+
 
 
     }

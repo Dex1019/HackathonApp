@@ -43,6 +43,7 @@ public class UserDetails extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         initialize();
 
     }
@@ -58,6 +59,7 @@ public class UserDetails extends AppCompatActivity implements View.OnClickListen
         //this.myuser = new User();
 
         buttongetLocation.setOnClickListener(this);
+        buttonAdmitCard.setOnClickListener(this);
 
         Intent intent = getIntent();
         store_examname = intent.getStringExtra("ExamName");
@@ -100,6 +102,11 @@ public class UserDetails extends AppCompatActivity implements View.OnClickListen
 
     //Method to print Admit Card
     private void print_admitCard() {
+        Intent i = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://drive.google.com/file/d/0B5yGTZd_mYWEUHQ2RmhSUmZIWjQ/view?usp=sharing"));
+
+        startActivity(i);
+
 
     }
 
@@ -132,4 +139,6 @@ public class UserDetails extends AppCompatActivity implements View.OnClickListen
 
 
     }
+
+
 }
